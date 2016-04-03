@@ -34,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
         displayer.setText(savedInstanceState.getCharSequence("displayer"));
     }
 
+    public void solveEquation(View view){
+        try {
+         //   Solver.solveEquation(displayer.getText().toString());
+        }catch(Exception e){
+           // System.out.println(e.getMessage());
+        }
+    }
+
     public void writeSymbolToDisplayer(View view) {
         Button btn = (Button)view;
         StringBuilder symbol = new StringBuilder();

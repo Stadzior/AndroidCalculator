@@ -259,7 +259,8 @@
                 android:text="@string/btnEqualsText"
                 android:id="@+id/Equals"
                 android:layout_row="3"
-                android:layout_column="5" />
+                android:layout_column="5"
+                android:onClick="solveEquation" />
 
         </GridLayout>
 
