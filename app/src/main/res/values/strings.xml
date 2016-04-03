@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="btnClearText">C</string>
     <string name="btnSqrtText">√</string>
-    <string name="btnLogText">Log</string>
+    <string name="btnLogText">log</string>
     <string name="btnPowerText">^</string>
     <string name="btnDivisionText">/</string>
     <string name="btnMultiplyText">*</string>
