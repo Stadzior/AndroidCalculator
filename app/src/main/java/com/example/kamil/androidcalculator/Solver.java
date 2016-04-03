@@ -1,5 +1,4 @@
 package com.example.kamil.androidcalculator;
-//import org.mariuszgromada.math.mxparser.*;
 /**
  * Created by Kamil on 2016-04-03.
  */
