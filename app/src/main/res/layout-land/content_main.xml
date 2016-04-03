@@ -25,7 +25,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_height="74dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewDisplayer"
             android:layout_row="0"
@@ -35,20 +35,20 @@
             android:textAlignment="viewEnd"
             android:textSize="35sp"
             android:gravity="end"
+            android:scrollbars="vertical"
             android:background="#000000"
             android:textColor="#ffffff"
-            android:maxLines="1"
             android:layout_gravity="top|left|bottom|right" />
 
         <GridLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_gravity="fill_horizontal|bottom">
+            android:layout_gravity="fill">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnClearText"
                 android:id="@+id/btnClear"
@@ -57,7 +57,7 @@
                 android:onClick="clearDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnLogText"
                 android:id="@+id/btnLog"
@@ -66,7 +66,7 @@
                 android:onClick="clearDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnPrevText"
                 android:id="@+id/btnPrev"
@@ -75,7 +75,7 @@
                 android:onClick="deletePreviousSymbol" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnFourText"
                 android:id="@+id/btnFour"
@@ -84,7 +84,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSqrtText"
                 android:id="@+id/btnSqrt"
@@ -93,7 +93,7 @@
                 android:onClick="clearDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSevenText"
                 android:id="@+id/btnSeven"
@@ -102,7 +102,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnFiveText"
                 android:id="@+id/btnFive"
@@ -111,7 +111,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSixText"
                 android:id="@+id/btnSix"
@@ -120,7 +120,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSubstractText"
                 android:id="@+id/btnSubstract"
@@ -129,7 +129,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnAddText"
                 android:id="@+id/btnAdd"
@@ -138,7 +138,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnEightText"
                 android:id="@+id/btnEight"
@@ -147,7 +147,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnNineText"
                 android:id="@+id/btnNine"
@@ -156,7 +156,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnMultiplyText"
                 android:id="@+id/btnMultiply"
@@ -165,7 +165,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnDivisionText"
                 android:id="@+id/btnDivision"
@@ -174,7 +174,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnOneText"
                 android:id="@+id/btnOne"
@@ -183,7 +183,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnTwoText"
                 android:id="@+id/btnTwo"
@@ -192,7 +192,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnThreeText"
                 android:id="@+id/btnThree"
@@ -201,7 +201,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnPowerText"
                 android:id="@+id/btnPower"
@@ -210,7 +210,7 @@
                 android:onClick="clearDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnZeroText"
                 android:id="@+id/btnZero"
@@ -219,7 +219,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnCommaText"
                 android:id="@+id/btnComma"
@@ -228,7 +228,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSignText"
                 android:id="@+id/btnSign"
@@ -236,7 +236,7 @@
                 android:layout_column="2" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnParenthesisOpen"
                 android:id="@+id/btnParenthesisOpen"
@@ -245,7 +245,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnParenthesisClose"
                 android:id="@+id/btnParenthesisClose"
@@ -254,7 +254,7 @@
                 android:onClick="writeSymbolToDisplayer" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="@string/btnEqualsText"
                 android:id="@+id/Equals"
