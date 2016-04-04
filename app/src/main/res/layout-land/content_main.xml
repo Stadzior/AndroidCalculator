@@ -30,15 +30,14 @@
             android:id="@+id/textViewDisplayer"
             android:layout_row="0"
             android:layout_column="0"
-            android:textStyle="normal"
             android:theme="@style/Base.Theme.AppCompat.Light"
             android:textAlignment="viewEnd"
             android:textSize="35sp"
             android:gravity="end"
             android:scrollbars="vertical"
-            android:background="#000000"
             android:textColor="#ffffff"
-            android:layout_gravity="top|left|bottom|right" />
+            android:layout_gravity="top|left|bottom|right"
+            android:background="#ffffff" />
 
         <GridLayout
             android:layout_width="match_parent"

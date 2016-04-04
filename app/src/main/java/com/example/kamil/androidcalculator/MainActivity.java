@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void solveEquation(View view){
         try {
-         //   Solver.solveEquation(displayer.getText().toString());
+            displayer.setText(Solver.solveEquation(displayer.getText().toString()).toString());
         }catch(Exception e){
-           // System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 

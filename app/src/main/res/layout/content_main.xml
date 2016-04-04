@@ -36,10 +36,9 @@
             android:textAlignment="viewEnd"
             android:textSize="35sp"
             android:gravity="end"
-            android:background="#000000"
-            android:textColor="#ffffff"
             android:scrollbars="vertical"
-            android:layout_gravity="top|left|bottom|right" />
+            android:layout_gravity="top|left|bottom|right"
+            android:background="#ffffff" />
 
         <GridLayout
             android:layout_width="wrap_content"
