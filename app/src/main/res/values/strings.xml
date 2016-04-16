@@ -25,4 +25,9 @@
     <string name="btnCommaText">.</string>
     <string name="btnSignText">+/-</string>
     <string name="btnEqualsText">=</string>
+    <string name="aboutText">Kalkulator zrealizowany w ramach zajęć \"Systemy operacyjne na platformach mobilnych\".\n\n Autor: Kamil Stadryniak</string>
+    <string name="btnAdvancedText">Zaawansowany</string>
+    <string name="btnBasicText">Podstawowy</string>
+    <string name="btnAboutText">O aplikacji</string>
+    <string name="btnExitText">Wyjście</string>
 </resources>

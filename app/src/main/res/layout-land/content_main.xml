@@ -26,7 +26,7 @@
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
-            android:text="Zaawansowany"
+            android:text="@string/btnAdvancedText"
             android:id="@+id/btnAdvanced"
             android:layout_gravity="center"
             android:onClick="OpenAdvanced"
@@ -38,7 +38,7 @@
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
-            android:text="Podstawowy"
+            android:text="@string/btnBasicText"
             android:id="@+id/btnBasic"
             android:layout_gravity="center"
             android:onClick="OpenBasic"
@@ -50,7 +50,7 @@
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
-            android:text="O aplikacji"
+            android:text="@string/btnAboutText"
             android:id="@+id/btnAbout"
             android:layout_marginBottom="15dp"
             android:layout_gravity="center"
@@ -62,7 +62,7 @@
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
-            android:text="Wyjście"
+            android:text="@string/btnExitText"
             android:id="@+id/btnExit"
             android:layout_marginBottom="15dp"
             android:layout_gravity="center"
