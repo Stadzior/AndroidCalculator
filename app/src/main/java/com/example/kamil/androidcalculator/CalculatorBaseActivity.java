@@ -12,9 +12,11 @@ public class CalculatorBaseActivity extends AppCompatActivity {
     private TextView displayer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advanced);
+    }
+    protected void initializeCalculator(int activity) {
+        setContentView(activity);
         setDisplayer((TextView) findViewById(R.id.textViewDisplayer));
         displayer.setMovementMethod(new ScrollingMovementMethod());
     }
