@@ -1,65 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#888888">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
-    <GridLayout
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true">
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Zaawansowany"
-            android:id="@+id/btnAdvanced"
-            android:layout_gravity="center"
-            android:onClick="OpenAdvanced"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="5dp" />
+    </android.support.design.widget.AppBarLayout>
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Podstawowy"
-            android:id="@+id/btnBasic"
-            android:layout_gravity="center"
-            android:onClick="OpenBasic"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="5dp" />
+    <include layout="@layout/content_main"/>
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="O aplikacji"
-            android:id="@+id/btnAbout"
-            android:layout_marginBottom="15dp"
-            android:layout_gravity="center"
-            android:onClick="OpenAbout"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_marginLeft="5dp" />
-
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Wyjście"
-            android:id="@+id/btnExit"
-            android:layout_marginBottom="15dp"
-            android:layout_gravity="center"
-            android:onClick="CloseApplication"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:layout_marginLeft="5dp" />
-
-    </GridLayout>
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
