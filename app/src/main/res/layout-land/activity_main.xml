@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#888888">
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -18,22 +18,24 @@
             android:layout_height="70dp"
             android:text="Zaawansowany"
             android:id="@+id/btnAdvanced"
-            android:layout_marginBottom="15dp"
             android:layout_gravity="center"
             android:onClick="OpenAdvanced"
             android:layout_row="0"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp" />
 
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:text="Podstawowy"
             android:id="@+id/btnBasic"
-            android:layout_marginBottom="15dp"
             android:layout_gravity="center"
             android:onClick="OpenBasic"
             android:layout_row="0"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp" />
 
         <Button
             android:layout_width="250dp"
@@ -44,7 +46,8 @@
             android:layout_gravity="center"
             android:onClick="OpenAbout"
             android:layout_row="1"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:layout_marginLeft="5dp" />
 
         <Button
             android:layout_width="250dp"
@@ -55,7 +58,8 @@
             android:layout_gravity="center"
             android:onClick="CloseApplication"
             android:layout_row="1"
-            android:layout_column="1" />
+            android:layout_column="1"
+            android:layout_marginLeft="5dp" />
 
     </GridLayout>
 </RelativeLayout>
