@@ -2,9 +2,6 @@ package com.example.kamil.androidcalculator;
 
 import java.util.Stack;
 
-/**
- * Created by Kamil on 2016-04-03.
- */
 public class Solver {
 
     private static Stack<String> buildExpresionStack(String expression){

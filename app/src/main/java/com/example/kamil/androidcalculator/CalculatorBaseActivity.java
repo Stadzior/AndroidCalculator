@@ -1,11 +1,14 @@
 package com.example.kamil.androidcalculator;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CalculatorBaseActivity extends AppCompatActivity {
 
@@ -34,8 +37,13 @@ public class CalculatorBaseActivity extends AppCompatActivity {
     public void solveEquation(View view){
         try {
             displayer.setText(Solver.solveEquation(displayer.getText().toString()).toString());
-        }catch(Exception e){
-            System.out.println(e.getMessage());
+            throw new IllegalArgumentException();
+        }
+        catch(IllegalArgumentException e){
+            displayToast(this,"Formuła jest niepoprawna! Nie można jej rozwiązać.",Color.RED,Color.BLACK,Toast.LENGTH_LONG);
+        }
+        catch(Exception e){
+            displayToast(this,"Ups! wystąpił nieznany problem :(", Color.RED,Color.BLACK, Toast.LENGTH_LONG);
         }
     }
 
@@ -62,5 +70,14 @@ public class CalculatorBaseActivity extends AppCompatActivity {
 
     public void setDisplayer(TextView displayer) {
         this.displayer = displayer;
+    }
+
+    public static void displayToast(Context activity,String text,int textColor,int backgroundColor,int duration)
+    {
+        Toast toast = Toast.makeText(activity,text, duration);
+        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+        v.setTextColor(textColor);
+        v.setBackgroundColor(backgroundColor);
+        toast.show();
     }
 }
