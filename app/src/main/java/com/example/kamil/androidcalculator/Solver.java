@@ -4,13 +4,13 @@ import java.util.Stack;
 
 public class Solver {
 
-    private static Stack<String> buildExpresionStack(String expression){
-        Stack<String> expressionStack = new Stack<String>();
+    private static Stack<String> buildExpressionStack(String expression) throws IllegalArgumentException{
+        Stack<String> expressionStack = new Stack<String>();    //expression = log(-2+4(
         expressionStack.push("3+subResult");
         expressionStack.push("1+2");
         return expressionStack;
     }
-    private static Double resolveExpresionStack(Stack<String> expressionStack)throws Exception{
+    private static Double resolveExpressionStack(Stack<String> expressionStack)throws Exception{
         Double result = 0.0;
         Integer initialStackSize = expressionStack.size();
         for (int i = 0; i < initialStackSize; i++) {
@@ -74,8 +74,7 @@ public class Solver {
     }
 
     public static Double solveEquation(String expression) throws Exception{
-        Stack<String> expressionStack = buildExpresionStack(expression);
-        return resolveExpresionStack(expressionStack);
+        Stack<String> expressionStack = buildExpressionStack(expression);
+        return resolveExpressionStack(expressionStack);
     }
-
 }

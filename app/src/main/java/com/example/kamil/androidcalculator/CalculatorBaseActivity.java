@@ -54,6 +54,12 @@ public class CalculatorBaseActivity extends AppCompatActivity {
         if(symbol.toString().equals("log") || symbol.toString().equals("√")){
             symbol.append('(');
         }
+        if (displayer.length()>0) {
+            char lastCharacterAtDisplayer = displayer.getText().charAt(displayer.length() - 1);
+            if ((symbol.charAt(0) == '(') && (Character.isDigit(lastCharacterAtDisplayer) || lastCharacterAtDisplayer == ')')) {
+                symbol.insert(0, '*');
+            }
+        }
         displayer.append(symbol.toString());
     }
 
@@ -63,13 +69,28 @@ public class CalculatorBaseActivity extends AppCompatActivity {
 
     public void deletePreviousSymbol(View view){
         if(displayer.length()>0){
-            String revertedText = displayer.getText().subSequence(0,displayer.length()-1).toString();
-            displayer.setText(revertedText);
+            String resultText = displayer.getText().subSequence(0,displayer.length()-1).toString();
+            displayer.setText(resultText);
         }
     }
 
     public void setDisplayer(TextView displayer) {
         this.displayer = displayer;
+    }
+
+    public void switchSign(View view){
+        if(displayer.length()>0){
+            StringBuilder resultExpression = new StringBuilder(displayer.getText());
+            if(resultExpression.charAt(0)=='-') {
+                resultExpression.delete(0,2);
+                resultExpression.deleteCharAt(resultExpression.length() - 1);
+            }
+                else {
+                resultExpression.insert(0, "-(");
+                resultExpression.append(")");
+            }
+            displayer.setText(resultExpression.toString());
+        }
     }
 
     public static void displayToast(Context activity,String text,int textColor,int backgroundColor,int duration)
