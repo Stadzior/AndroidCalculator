@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kamil.androidcalculator.solver.Solver;
+
 public class CalculatorBaseActivity extends AppCompatActivity {
 
     private TextView displayer;
