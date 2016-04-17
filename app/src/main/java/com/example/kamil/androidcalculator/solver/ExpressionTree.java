@@ -2,6 +2,7 @@ package com.example.kamil.androidcalculator.solver;
 
 import java.util.TreeMap;
 
+
 /**
  * Created by Kamil on 2016-04-17.
  */
@@ -55,48 +56,39 @@ public class ExpressionTree extends TreeMap<Integer,ExpressionNode> {
         return result;
     }
 
-    private Double solveExpression(String expression) throws Exception{
+    public Double solveExpression(String expression) throws Exception{
         Double evaluatedExpression = 0.0;
         String[] factors;
         if(expression.contains("+")){
             factors = expression.split("\\+");
-            for(String factor : factors){
-                evaluatedExpression+= Double.parseDouble(factor);
-            }
+            evaluatedExpression= Double.parseDouble(factors[0]);
+            evaluatedExpression+= Double.parseDouble(factors[1]);
         }else{
             if(expression.contains("-")){
                 factors = expression.split("\\-");
-                for(String factor : factors){
-                    evaluatedExpression-= Double.parseDouble(factor);
-                }
+                evaluatedExpression= Double.parseDouble(factors[0]);
+                evaluatedExpression-= Double.parseDouble(factors[1]);
             }else{
                 if(expression.contains("/")){
                     factors = expression.split("/");
-                    for(String factor : factors){
-                        evaluatedExpression/= Double.parseDouble(factor);
-                    }
+                    evaluatedExpression= Double.parseDouble(factors[0]);
+                    evaluatedExpression/= Double.parseDouble(factors[1]);
                 }else{
                     if(expression.contains("*")){
                         factors = expression.split("\\*");
-                        for(String factor : factors){
-                            evaluatedExpression*= Double.parseDouble(factor);
-                        }
+                        evaluatedExpression= Double.parseDouble(factors[0]);
+                        evaluatedExpression*= Double.parseDouble(factors[1]);
                     }else{
-                        String factor = expression.substring(expression.indexOf('('),expression.indexOf(')'));
                         if(expression.contains("^")){
-                               evaluatedExpression = Math.pow(Double.parseDouble(expression.substring(0,expression.indexOf('^'))),Double.parseDouble(factor));
-//                            factors = expression.split("^");
-//                            evaluatedExpression = Math.pow(Double.parseDouble(factors[0]),Double.parseDouble(factors[1]));
-//                            for (int i = 1; i < factors.length-1 ; i++) {
-//                                Double factor = evaluatedExpression;
-//                                Double exponent = Double.parseDouble(factors[i+1]);
-//                                evaluatedExpression = Math.pow(factor, exponent);
-//                            }
+                            factors = expression.split("^");
+                            evaluatedExpression = Math.pow(Double.parseDouble(factors[0]), Double.parseDouble(factors[1]));
                         }else{
                             if(expression.contains("√")){
+                                String factor = expression.replace("√(", "");
                                 evaluatedExpression = Math.sqrt(Double.parseDouble(factor));
                             }else{
                                 if(expression.contains("log")){
+                                    String factor = expression.replace("log(", "");
                                     evaluatedExpression = Math.log10(Double.parseDouble(factor));
                                 }
                             }

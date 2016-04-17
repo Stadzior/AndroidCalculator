@@ -10,21 +10,20 @@ public class Solver {
         int idNode = 0;
         int idParent = -1;
         expressionTree.put(idNode,new ExpressionNode(idNode,idParent,expression));
-        while(!expression.isEmpty()){
-
-        }
-
+//        while(!expression.isEmpty()){
+//          //Build tree
+//        }
         return expressionTree;
     }
 
     public static Double solveEquation(String expression) throws Exception{
         ExpressionTree expressionTree = buildExpressionTree(expression);
-        return expressionTree.traverseAndResolve();
+//        return expressionTree.traverseAndResolve();
+          return expressionTree.solveExpression(expression);
     }
 
-    public static String getFinalEquation(String expression) throws Exception{
-        ExpressionTree expressionTree = buildExpressionTree(expression);
-        //return expressionTree.traverseAndResolve();
-        return expressionTree.getFinalExpression();
-    }
+//    public static String getFinalEquation(String expression) throws Exception{
+//        ExpressionTree expressionTree = new ExpressionTree();
+//        return expressionTree.traverseAndResolve();
+//        }
 }

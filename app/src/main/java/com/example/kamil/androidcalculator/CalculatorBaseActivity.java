@@ -3,6 +3,7 @@ package com.example.kamil.androidcalculator;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -37,20 +38,42 @@ public class CalculatorBaseActivity extends AppCompatActivity {
     }
 
     public void solveEquation(View view){
-        try {
+        try{
             displayer.setText(Solver.solveEquation(displayer.getText().toString()).toString());
-            throw new IllegalArgumentException();
         }
         catch(IllegalArgumentException e){
-            displayToast(this,"Formuła jest niepoprawna! Nie można jej rozwiązać.",Color.RED,Color.BLACK,Toast.LENGTH_LONG);
+            displayToast(this,"Formuła jest niepoprawna! Nie można jej rozwiązać." + e.getMessage(),Color.RED,Color.BLACK,Toast.LENGTH_LONG);
         }
         catch(Exception e){
-            displayToast(this,"Ups! wystąpił nieznany problem :(", Color.RED,Color.BLACK, Toast.LENGTH_LONG);
+            displayToast(this, "Ups! wystąpił nieznany problem :(" + e.getMessage(), Color.RED, Color.BLACK, Toast.LENGTH_LONG);
         }
     }
 
     public void writeSymbolToDisplayer(View view) {
         Button btn = (Button)view;
+        String symbol = getSymbol(btn);
+        boolean symbolIsNumberOrDot = Character.isDigit(symbol.charAt(0)) || symbol.charAt(0) == '.';
+        if(!symbolIsNumberOrDot && isExpressionResolvable()){
+            solveEquation(view);
+            if(symbol.contains("log") || symbol.contains("√")) {
+                StringBuilder afterResolveSymbol = new StringBuilder();
+                afterResolveSymbol.append(symbol);
+                afterResolveSymbol.append(displayer.getText());
+                afterResolveSymbol.append(")");
+                displayer.setText(afterResolveSymbol.toString());
+            }else{
+                if(!symbol.contains(")")){
+                    displayer.append(symbol);
+                }
+            }
+        }
+        else{
+            displayer.append(symbol);
+        }
+    }
+
+    @NonNull
+    private String getSymbol(Button btn) {
         StringBuilder symbol = new StringBuilder();
         symbol.append(btn.getText().toString());
         if(symbol.toString().equals("log") || symbol.toString().equals("√") || symbol.toString().equals("^")){
@@ -62,7 +85,19 @@ public class CalculatorBaseActivity extends AppCompatActivity {
                 symbol.insert(0, '*');
             }
         }
-        displayer.append(symbol.toString());
+        return symbol.toString();
+    }
+
+    private boolean isExpressionResolvable(){
+        char[] displayedText = displayer.getText().toString().toCharArray();
+        boolean isResolvable = false;
+        for(char symbol : displayedText){
+            if (symbol == '/' || symbol == '*' || symbol == '+' || symbol == '-' || symbol == '^' || symbol == 'l' || symbol == '√'){
+                isResolvable = true;
+                break;
+            }
+        }
+        return isResolvable;
     }
 
     public void clearDisplayer(View view){
