@@ -53,7 +53,7 @@ public class CalculatorBaseActivity extends AppCompatActivity {
         Button btn = (Button)view;
         StringBuilder symbol = new StringBuilder();
         symbol.append(btn.getText().toString());
-        if(symbol.toString().equals("log") || symbol.toString().equals("√")){
+        if(symbol.toString().equals("log") || symbol.toString().equals("√") || symbol.toString().equals("^")){
             symbol.append('(');
         }
         if (displayer.length()>0) {

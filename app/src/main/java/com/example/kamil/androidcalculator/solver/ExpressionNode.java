@@ -7,13 +7,11 @@ public class ExpressionNode {
 
     private int idParent;
     private String expression;
-    private int level;
     private int idNode;
 
-    public ExpressionNode( int idNode, int parentId, int level, String expression) {
+    public ExpressionNode( int idNode, int parentId, String expression) {
         this.idParent = parentId;
         this.expression = expression;
-        this.level = level;
         this.idNode = idNode;
     }
 
@@ -31,14 +29,6 @@ public class ExpressionNode {
 
     public void setExpression(String expression) {
         this.expression = expression;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     public int getIdNode() {
