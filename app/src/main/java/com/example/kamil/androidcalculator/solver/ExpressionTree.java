@@ -80,7 +80,8 @@ public class ExpressionTree extends TreeMap<Integer,ExpressionNode> {
                         evaluatedExpression*= Double.parseDouble(factors[1]);
                     }else{
                         if(expression.contains("^")){
-                            factors = expression.split("^");
+                            factors = expression.split("\\^");
+                            //throw new Exception(factors[0] + "  " + factors[1]);
                             evaluatedExpression = Math.pow(Double.parseDouble(factors[0]), Double.parseDouble(factors[1]));
                         }else{
                             if(expression.contains("√")){

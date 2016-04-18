@@ -59,7 +59,6 @@ public class CalculatorBaseActivity extends AppCompatActivity {
                 StringBuilder afterResolveSymbol = new StringBuilder();
                 afterResolveSymbol.append(symbol);
                 afterResolveSymbol.append(displayer.getText());
-                afterResolveSymbol.append(")");
                 displayer.setText(afterResolveSymbol.toString());
             }else{
                 if(!symbol.contains(")")){
@@ -76,7 +75,7 @@ public class CalculatorBaseActivity extends AppCompatActivity {
     private String getSymbol(Button btn) {
         StringBuilder symbol = new StringBuilder();
         symbol.append(btn.getText().toString());
-        if(symbol.toString().equals("log") || symbol.toString().equals("√") || symbol.toString().equals("^")){
+        if(symbol.toString().equals("log") || symbol.toString().equals("√")){
             symbol.append('(');
         }
         if (displayer.length()>0) {
